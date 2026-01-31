@@ -16,6 +16,10 @@
         sans-serif;
 }
 
+body {
+    font-size: clamp(1rem, 0.75rem + 1.5vw, 1.5rem);
+}
+
 /* Main background for the hero section */
 .hero_background {
     display: flex;
@@ -49,6 +53,7 @@ img {
 h2 {
     font-family: 'Playfair Display';
     padding-bottom: 1rem;
+    font-size: clamp(2rem, 0.75rem + 2vw, 3rem);
 }
 
 /* This has to be done in order to let the image take up the correct amount of space */
@@ -65,7 +70,7 @@ h2 {
 .hero_img_container .name {
     position: absolute;
     bottom: 0;
-    font-size: 52px;
+    font-size: 3.3rem;
     font-weight: 700;
     font-family: 'Playfair Display';
     text-align: start;
@@ -115,13 +120,14 @@ h2 {
     align-items: center;
 }
 
-.details {
-    padding-top: 1rem;
+.details,
+.description {
+    padding: 1rem 2rem 1rem;
 }
 
 .project_cards .project_name {
     font-weight: 600;
-    font-size: 20px;
+    font-size: clamp(1rem, 1rem + 1vw, 2rem);
 }
 
 .project_links {
@@ -131,10 +137,9 @@ h2 {
 
 .card {
     min-height: 450px;
-    max-width: 400px;
+    max-width: 600px;
     border: 2px solid var(--card-background);
     box-shadow: 10px 10px 20px rgb(0 0 0 / 0.25);
-    padding: 1rem;
 }
 
 /* contact section */
@@ -152,13 +157,25 @@ h2 {
     padding: 1rem 4rem 4rem;
 }
 
-.contact-details {
+.contact_details {
     display: grid;
-    row-gap: 1rem;
+    row-gap: 2rem;
+}
+
+.contact_info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .contact_details_links {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     place-items: center;
+}
+
+@media (min-width: 600px) {
+}
+@media (min-width: 1024px) {
 }
