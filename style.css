@@ -17,23 +17,23 @@
 }
 
 body {
-    font-size: clamp(1rem, 0.75rem + 1.5vw, 1.5rem);
+    font-size: clamp(1rem, 0.75rem + 1.2vw, 1.7rem);
 }
 
 /* Main background for the hero section */
 .hero_background {
-    display: flex;
-    justify-content: center;
+    padding-top: 3rem;
     position: relative;
     background-color: var(--header-color);
     min-height: 300px;
+    z-index: -1;
 }
 
 /* Create a triangle at the bottom right corner to replicate the design */
 .hero_background::before {
     content: '';
     position: absolute;
-    height: 300px;
+    height: 170px;
     width: 100%;
     bottom: 0;
     right: 0;
@@ -44,6 +44,7 @@ body {
         #fff 50%,
         #fff 100%
     );
+    z-index: -3;
 }
 
 img {
@@ -52,38 +53,36 @@ img {
 
 h2 {
     font-family: 'Playfair Display';
-    padding-bottom: 1rem;
-    font-size: clamp(2rem, 0.75rem + 2vw, 3rem);
+    font-size: clamp(1.5rem, 1.8rem + 2vw, 3rem);
+    font-weight: 500;
 }
 
 /* This has to be done in order to let the image take up the correct amount of space */
 .hero_img_container {
-    position: relative;
-    z-index: 1;
-    max-width: 350px;
-}
-
-.hero_img_container img {
-    min-height: 300px;
+    background-image: url('profile_photos/main_profile/profile_highres.jpg');
+    background-size: cover;
+    max-width: 400px;
+    min-height: 600px;
+    margin: 0 auto;
+    display: flex;
 }
 
 .hero_img_container .name {
-    position: absolute;
-    bottom: 0;
-    font-size: 3.3rem;
-    font-weight: 700;
+    font-size: 4rem;
     font-family: 'Playfair Display';
-    text-align: start;
     padding: 0 25px;
     color: #fff;
+    align-self: end;
 }
 
 /* Personal information section */
+
 .personal_info_section main {
     display: grid;
     grid-template-columns: 1fr;
     padding: 3rem;
     place-items: center;
+    font-size: 1.2rem;
 }
 
 .links {
@@ -122,12 +121,12 @@ h2 {
 
 .details,
 .description {
-    padding: 1rem 2rem 1rem;
+    padding: 1rem;
 }
 
 .project_cards .project_name {
     font-weight: 600;
-    font-size: clamp(1rem, 1rem + 1vw, 2rem);
+    font-size: clamp(1.3rem, 1rem + 1vw, 1.5rem);
 }
 
 .project_links {
@@ -136,8 +135,8 @@ h2 {
 }
 
 .card {
-    min-height: 450px;
-    max-width: 600px;
+    min-height: 500px;
+    min-width: 300px;
     border: 2px solid var(--card-background);
     box-shadow: 10px 10px 20px rgb(0 0 0 / 0.25);
 }
@@ -151,31 +150,138 @@ h2 {
 
 .contact_section main {
     display: grid;
-    place-items: center;
+    place-content: start;
+    padding: 0 1rem 5rem;
 }
-.contact_section main {
-    padding: 1rem 4rem 4rem;
+
+.contact_section h2 {
+    justify-self: center;
 }
 
 .contact_details {
     display: grid;
-    row-gap: 2rem;
+    row-gap: 1rem;
 }
 
-.contact_info {
+.contact_details_intro {
+    padding-top: 10px;
+    font-size: 1.3rem;
+}
+
+.contact_info > div {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-top: 1rem;
 }
 
 .contact_details_links {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact_details_links .icon {
+    width: 40px;
 }
 
 @media (min-width: 600px) {
+    .links,
+    .hero_background::before {
+        display: none;
+    }
+
+    .hero_background {
+        background: none;
+    }
+
+    .hero_container {
+        padding-top: 5rem;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        background-color: var(--header-color);
+        min-height: 300px;
+        z-index: -1;
+    }
+
+    .hero_container::before {
+        content: '';
+        position: absolute;
+        height: 180px;
+        width: 100%;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(
+            to bottom right,
+            var(--header-color) 0%,
+            var(--header-color) 50%,
+            #fff 50%,
+            #fff 100%
+        );
+        z-index: -2;
+    }
+
+    .hero_img_container .name {
+        align-self: start;
+        overflow-wrap: normal;
+        text-wrap: nowrap;
+        font-size: 2.7rem;
+        transform: translateX(20rem);
+    }
+
+    .personal_info_section {
+        width: 400px;
+        font-size: 1rem;
+        border: 2px solid var(--card-background);
+        background-color: #fff;
+        margin-top: 2rem;
+        box-shadow: 10px 10px 20px rgb(0 0 0 / 0.25);
+    }
+
+    .hero_img_container {
+        max-width: 400px;
+        min-height: 400px;
+        transform: translate(20px, -100px);
+    }
+
+    .projects {
+        place-items: start;
+        margin-top: 10rem;
+    }
+
+    .project_cards {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+    .contact_section {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contact_section h2 {
+        justify-self: start;
+    }
+    .contact_section main {
+        place-content: center;
+        justify-items: start;
+    }
+
+    .contact_details {
+        row-gap: 1rem;
+    }
+
+    .contact_details_links {
+        justify-self: start;
+        gap: 1.3rem;
+    }
+    .contact_img_container {
+        display: grid;
+        place-items: center;
+        padding: 3rem;
+    }
+
+    .contact_img_container img {
+        min-height: 400px;
+        min-width: 250px;
+    }
 }
 @media (min-width: 1024px) {
 }
