@@ -20,35 +20,33 @@
 </head>
 
 <body>
-    <section class="header-section">
+    <div class="hero_container">
         <div class="hero_background">
             <div class="hero_img_container">
-                <img src="profile_photos/main_profile/profile_lowres.jpg" alt="Profile Photo" srcset="
-                profile_photos/main_profile/profile_highres.jpg 1400w,
-                profile_photos/main_profile/profile_lowres.jpg 781w,
-                ">
                 <div class="name">Dominique Leighton</div>
             </div>
         </div>
-    </section>
-    <section class="personal_info_section">
-        <main>
-            <h2>About me</h2>
-            <div><em>Deeply passionate about all that is related to software.</em> I've a PHD in computer science, and I
-                carry a vast amount of experience from working in big-tech. When I'm not working,
-                you'll likely find me dedicating time to learning about the bitcoin blockchain. I also like to mine
-                bitcoin in my tiny warehouse. I still haven't mined a block yet, but i'm hoping I will be able to do so
-                soon enough.</div>
-            <div class="links">
-                <a href="https://github.com" target="_blank"><img class="icon" src="icons/github.svg"
-                        alt="Github Icon"></a>
-                <a href="https://linkedin.com" target="_blank"><img class="icon" src="icons/linkedin.svg"
-                        alt="Linkedin Icon"></a>
-                <a href="https://x.com" target="_blank"><img class="icon" src="icons/twitter.svg"
-                        alt="X (formerly Twitter) icon"></a>
-            </div>
-        </main>
-    </section>
+        <section class="personal_info_section">
+            <main>
+                <h2>About me</h2>
+                <div><em>Deeply passionate about all that is related to software.</em> I've a PHD in computer science,
+                    and I
+                    carry a vast amount of experience from working in big-tech. When I'm not working,
+                    you'll likely find me dedicating time to learning about the bitcoin blockchain. I also like to mine
+                    bitcoin in my tiny warehouse. I still haven't mined a block yet, but i'm hoping I will be able to do
+                    so
+                    soon enough.</div>
+                <div class="links">
+                    <a href="https://github.com" target="_blank"><img class="icon" src="icons/github.svg"
+                            alt="Github Icon"></a>
+                    <a href="https://linkedin.com" target="_blank"><img class="icon" src="icons/linkedin.svg"
+                            alt="Linkedin Icon"></a>
+                    <a href="https://x.com" target="_blank"><img class="icon" src="icons/twitter.svg"
+                            alt="X (formerly Twitter) icon"></a>
+                </div>
+            </main>
+        </section>
+    </div>
     <section class="projects">
         <h2>My work</h2>
         <main class="project_cards"></main>
@@ -57,15 +55,20 @@
     <section class="contact_section">
         <main>
             <h2>Contact me</h2>
-            <div class="contact-details">
-                <div>Please get in touch if you think our work could be mutually beneficial!</div>
+            <div class="contact_details">
+                <div class="contact_details_intro">Please get in touch if you think our work could be mutually
+                    beneficial!</div>
                 <div>
                     <div>1234 Random Road</div>
                     <div>Random Town, California 12345</div>
                 </div>
-                <div>
-                    <div>555-555-555</div>
-                    <div>dole@gmail.com</div>
+                <div class="contact_info">
+                    <div>
+                        <div>555-555-555</div>
+                    </div>
+                    <div>
+                        <div>dole@gmail.com</div>
+                    </div>
                 </div>
                 <div class="contact_details_links">
                     <a href="https://github.com" target="_blank"><img class="icon" src="icons/github.svg"
@@ -77,11 +80,14 @@
                 </div>
             </div>
         </main>
-    </section>
-    <picture>
-        <img src="profile_photos/secondary_profile/profile_highres.jpg" alt="">
-    </picture>
 
+        <div class="contact_img_container">
+            <img src="profile_photos/secondary_profile/profile_highres.jpg" srcset="profile_photos/secondary_profile/profile_lowres.jpg 768w,
+            profile_photos/secondary_profile/profile_highres.jpg 1400w" alt="">
+        </div>
+
+    </section>
+    <!-- try this syntax for adding responsive images -->
 
 </body>
 
