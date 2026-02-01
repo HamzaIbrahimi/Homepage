@@ -43,7 +43,7 @@ const projects = [
             'A streamlined project management tool designed specifically for agile software development teams.',
     },
     {
-        projectName: 'HealthPulse Wearable',
+        projectName: 'HealthP Wear',
         imgSrc: 'project_photos/smart-watch.jpg',
         iconLinks: {
             github: 'https://github.com/user/healthpulse',
