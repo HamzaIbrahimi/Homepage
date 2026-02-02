@@ -17,7 +17,7 @@
 }
 
 body {
-    font-size: clamp(1rem, 0.75rem + 1.2vw, 1.7rem);
+    font-size: clamp(1rem, 0.75rem + 1.2vw, 1.5rem);
 }
 
 /* Main background for the hero section */
@@ -225,38 +225,44 @@ h2 {
         overflow-wrap: normal;
         text-wrap: nowrap;
         font-size: 2.7rem;
-        transform: translateX(20rem);
+        transform: translateX(10rem);
     }
 
-    .personal_info_section {
-        width: 400px;
+    .personal_info_section main {
+        max-width: 500px;
         font-size: 1rem;
         border: 2px solid var(--card-background);
         background-color: #fff;
         margin-top: 2rem;
         box-shadow: 10px 10px 20px rgb(0 0 0 / 0.25);
+        font-size: 1rem;
+        margin-right: 1rem;
+        position: relative;
+        z-index: -2;
     }
 
     .hero_img_container {
-        max-width: 400px;
+        max-width: 300px;
         min-height: 400px;
         transform: translate(20px, -100px);
     }
 
     .projects {
         place-items: start;
-        margin-top: 10rem;
+        margin-top: 2rem;
     }
 
     .project_cards {
         grid-template-columns: 1fr 1fr;
+        place-content: center;
         column-gap: 2rem;
     }
     .contact_section {
         display: grid;
         grid-template-columns: 2fr 1fr;
     }
-    .contact_section h2 {
+    .contact_section h2,
+    .projects h2 {
         justify-self: start;
     }
     .contact_section main {
