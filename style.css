@@ -139,7 +139,7 @@ h2 {
 
 .card {
     min-height: 500px;
-    max-width: 400px;
+    max-width: 600px;
     border: 2px solid var(--card-background);
     box-shadow: 10px 10px 20px rgb(0 0 0 / 0.25);
 }
@@ -186,7 +186,7 @@ h2 {
     width: 40px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 780px) {
     .links,
     .hero_background::before {
         display: none;
@@ -294,8 +294,25 @@ h2 {
 }
 
 @media (min-width: 1024px) {
-    .projects {
-        place-items: center;
+    .links {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .hero_img_container {
+        max-width: 450px;
+        min-height: 500px;
+    }
+
+    .personal_info_section {
+        max-height: 400px;
+        margin: 0;
+    }
+
+    .hero_img_container .name {
+        transform: translate(0);
+        align-self: end;
     }
 
     .project_cards {
@@ -304,7 +321,7 @@ h2 {
     }
 
     .contact_img_container {
-        min-width: 600px;
+        min-width: 500px;
         min-height: 300px;
     }
 }
