@@ -17,12 +17,13 @@
 }
 
 body {
-    font-size: clamp(1rem, 0.75rem + 1.2vw, 1.5rem);
+    font-size: clamp(1rem, 0.75rem + 1.2vw, 1.3rem);
 }
 
 /* Main background for the hero section */
 .hero_background {
     padding-top: 3rem;
+    width: 100%;
     position: relative;
     background-color: var(--header-color);
     min-height: 300px;
@@ -53,7 +54,7 @@ img {
 
 h2 {
     font-family: 'Playfair Display';
-    font-size: clamp(1.5rem, 1.8rem + 2vw, 3rem);
+    font-size: clamp(1.5rem, 1.8rem + 2vw, 2rem);
     font-weight: 500;
 }
 
@@ -61,17 +62,19 @@ h2 {
 .hero_img_container {
     background-image: url('profile_photos/main_profile/profile_highres.jpg');
     background-size: cover;
-    max-width: 400px;
+    background-position: center;
+    max-width: 300px;
     min-height: 600px;
     margin: 0 auto;
     display: flex;
 }
 
 .hero_img_container .name {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-family: 'Playfair Display';
     padding: 0 25px;
     color: #fff;
+    padding: 1rem;
     align-self: end;
 }
 
@@ -82,7 +85,7 @@ h2 {
     grid-template-columns: 1fr;
     padding: 3rem;
     place-items: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .links {
@@ -126,7 +129,7 @@ h2 {
 
 .project_cards .project_name {
     font-weight: 600;
-    font-size: clamp(1.3rem, 1rem + 1vw, 1.5rem);
+    font-size: clamp(1.3rem, 0.75rem + 1vw, 1.5rem);
 }
 
 .project_links {
@@ -136,7 +139,7 @@ h2 {
 
 .card {
     min-height: 500px;
-    min-width: 300px;
+    max-width: 400px;
     border: 2px solid var(--card-background);
     box-shadow: 10px 10px 20px rgb(0 0 0 / 0.25);
 }
@@ -191,12 +194,12 @@ h2 {
 
     .hero_background {
         background: none;
+        width: 100%;
     }
 
     .hero_container {
-        padding-top: 5rem;
+        padding: 5rem;
         display: flex;
-        justify-content: center;
         position: relative;
         background-color: var(--header-color);
         min-height: 300px;
@@ -228,15 +231,11 @@ h2 {
         transform: translateX(10rem);
     }
 
-    .personal_info_section main {
-        max-width: 500px;
-        font-size: 1rem;
+    .personal_info_section {
         border: 2px solid var(--card-background);
         background-color: #fff;
         margin-top: 2rem;
         box-shadow: 10px 10px 20px rgb(0 0 0 / 0.25);
-        font-size: 1rem;
-        margin-right: 1rem;
         position: relative;
         z-index: -2;
     }
@@ -248,7 +247,7 @@ h2 {
     }
 
     .projects {
-        place-items: start;
+        place-content: center;
         margin-top: 2rem;
     }
 
@@ -256,6 +255,10 @@ h2 {
         grid-template-columns: 1fr 1fr;
         place-content: center;
         column-gap: 2rem;
+    }
+
+    .card {
+        max-width: 300px;
     }
     .contact_section {
         display: grid;
@@ -289,5 +292,19 @@ h2 {
         min-width: 250px;
     }
 }
+
 @media (min-width: 1024px) {
+    .projects {
+        place-items: center;
+    }
+
+    .project_cards {
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 2rem;
+    }
+
+    .contact_img_container {
+        min-width: 600px;
+        min-height: 300px;
+    }
 }
